@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "agent-mode"
+version = "0.1.0"
+description = "AI Agent System with secure CLI execution and plugin architecture"
+authors = ["Agent Mode Team"]
+readme = "README.md"
+packages = [
+    { include = "agent" },
+    { include = "api" },
+    { include = "interface" },
+    { include = "plugins" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+openai = ">=1.70.0,<2.0.0"
+rich = ">=14.0.0,<15.0.0"
+typer = ">=0.15.2,<0.16.0"
+pyyaml = ">=6.0.2,<7.0.0"
+python-dotenv = ">=1.1.0,<2.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
