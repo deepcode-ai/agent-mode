@@ -22,4 +22,3 @@ class PluginLoader:
                 print(f"Failed to load plugin '{plugin_name}': {e}")
 
         return self.plugins
-

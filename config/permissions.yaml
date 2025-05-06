@@ -1,0 +1,28 @@
+# config/permissions.yaml
+plugins:
+  aws: []
+  github: []
+
+# config/logger.yaml
+logging:
+  version: 1
+  disable_existing_loggers: False
+  handlers:
+    console:
+      class: logging.StreamHandler
+      level: DEBUG
+      formatter: simple
+  loggers:
+    root:
+      level: DEBUG
+      handlers: [console]
+
+# config/plugins.yaml
+roles:
+  default:
+    - github
+  admin:
+    - github
+    - aws
+    - kubernetes
+    - nodejs
